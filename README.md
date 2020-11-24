@@ -5,3 +5,7 @@ Ini adalah Final Project untuk memenuhi Ujian Akhir Semester pada Mata Kuliah Mo
 Nama : Wildan Sania Alfiansyah
 Kelas : 5C
 NIM : 18090118
+
+Nama : Hadi Kusumanto
+Kelas :5C
+NIM : 18090112
