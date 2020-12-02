@@ -10,6 +10,7 @@ abstract class TodoDatabase: RoomDatabase(){
 
     abstract fun todoDAO() : TodoDAO
 
+    //test
     companion object{
         @Volatile
         private var INSTANCE: TodoDatabase? = null
