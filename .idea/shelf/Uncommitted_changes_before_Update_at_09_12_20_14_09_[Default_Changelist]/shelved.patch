@@ -1,0 +1,219 @@
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    tools:context=\".MainActivity\">\n\n    <TextView\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:text=\"Hello World!\"\n        app:layout_constraintBottom_toBottomOf=\"parent\"\n        app:layout_constraintLeft_toLeftOf=\"parent\"\n        app:layout_constraintRight_toRightOf=\"parent\"\n        app:layout_constraintTop_toTopOf=\"parent\" />\n\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_main.xml	(revision d821eb4daf7a382614b4f8b481fc98a87b7a2b5b)
++++ app/src/main/res/layout/activity_main.xml	(date 1607497788000)
+@@ -1,18 +1,71 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent"
+-    tools:context=".MainActivity">
++
++<layout xmlns:android="http://schemas.android.com/apk/res/android">
++    <androidx.constraintlayout.widget.ConstraintLayout
++        xmlns:app="http://schemas.android.com/apk/res-auto"
++        xmlns:tools="http://schemas.android.com/tools"
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        tools:context=".MainActivity">
+ 
+-    <TextView
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:text="Hello World!"
+-        app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintLeft_toLeftOf="parent"
+-        app:layout_constraintRight_toRightOf="parent"
+-        app:layout_constraintTop_toTopOf="parent" />
++        <TextView
++            android:id="@+id/textView"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_marginTop="32dp"
++            android:text="Note and Contact"
++            android:textSize="30sp"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toTopOf="parent" />
+ 
+-</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
++        <TextView
++            android:id="@+id/textView2"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_marginStart="32dp"
++            android:layout_marginLeft="32dp"
++            android:layout_marginTop="150dp"
++            android:text="Menu :"
++            android:textSize="24sp"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toBottomOf="@+id/textView" />
++
++        <LinearLayout
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:layout_marginStart="32dp"
++            android:layout_marginLeft="32dp"
++            android:layout_marginTop="16dp"
++            android:layout_marginEnd="32dp"
++            android:layout_marginRight="32dp"
++            android:orientation="horizontal"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toBottomOf="@+id/textView2">
++
++            <Button
++                android:id="@+id/contactBtn"
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:layout_marginEnd="5dp"
++                android:layout_marginRight="5dp"
++                android:layout_weight="1"
++                android:paddingTop="50dp"
++                android:paddingBottom="50dp"
++                android:text="Contact" />
++
++            <Button
++                android:id="@+id/noteBtn"
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:layout_marginStart="5dp"
++                android:layout_marginLeft="5dp"
++                android:layout_weight="1"
++                android:paddingTop="50dp"
++                android:paddingBottom="50dp"
++                android:text="Note" />
++        </LinearLayout>
++
++    </androidx.constraintlayout.widget.ConstraintLayout>
++</layout>
+\ No newline at end of file
+Index: app/src/main/java/com/wildan/mpoop2_finalproject/MainActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.wildan.mpoop2_finalproject\n\nimport androidx.appcompat.app.AppCompatActivity\nimport android.os.Bundle\n//test\nclass MainActivity : AppCompatActivity() {\n    override fun onCreate(savedInstanceState: Bundle?) {\n        super.onCreate(savedInstanceState)\n        setContentView(R.layout.activity_main)\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/wildan/mpoop2_finalproject/MainActivity.kt	(revision d821eb4daf7a382614b4f8b481fc98a87b7a2b5b)
++++ app/src/main/java/com/wildan/mpoop2_finalproject/MainActivity.kt	(date 1607497788000)
+@@ -1,11 +1,23 @@
+ package com.wildan.mpoop2_finalproject
+ 
++import android.content.Intent
+ import androidx.appcompat.app.AppCompatActivity
+ import android.os.Bundle
++import androidx.databinding.DataBindingUtil
++import com.wildan.mpoop2_finalproject.databinding.ActivityMainBinding
++
+ //test
+ class MainActivity : AppCompatActivity() {
+     override fun onCreate(savedInstanceState: Bundle?) {
+         super.onCreate(savedInstanceState)
+-        setContentView(R.layout.activity_main)
++//        setContentView(R.layout.activity_main)
++
++        val binding: ActivityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
++
++        binding.contactBtn.setOnClickListener{
++            val intent = Intent(this, ContactActivity::class.java)
++            startActivity(intent)
++        }
++
+     }
+ }
+\ No newline at end of file
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"GradleMigrationSettings\" migrationVersion=\"1\" />\n  <component name=\"GradleSettings\">\n    <option name=\"linkedExternalProjectsSettings\">\n      <GradleProjectSettings>\n        <option name=\"testRunner\" value=\"PLATFORM\" />\n        <option name=\"distributionType\" value=\"DEFAULT_WRAPPED\" />\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\n        <option name=\"gradleJvm\" value=\"1.8\" />\n        <option name=\"modules\">\n          <set>\n            <option value=\"$PROJECT_DIR$\" />\n            <option value=\"$PROJECT_DIR$/app\" />\n          </set>\n        </option>\n        <option name=\"resolveModulePerSourceSet\" value=\"false\" />\n      </GradleProjectSettings>\n    </option>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/gradle.xml	(revision d821eb4daf7a382614b4f8b481fc98a87b7a2b5b)
++++ .idea/gradle.xml	(date 1607496504000)
+@@ -15,6 +15,7 @@
+           </set>
+         </option>
+         <option name="resolveModulePerSourceSet" value="false" />
++        <option name="useQualifiedModuleNames" value="true" />
+       </GradleProjectSettings>
+     </option>
+   </component>
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>apply plugin: 'com.android.application'\napply plugin: 'kotlin-android'\napply plugin: 'kotlin-android-extensions'\n\napply plugin: 'kotlin-kapt'\n\nandroid {\n    compileSdkVersion 29\n    buildToolsVersion \"29.0.3\"\n\n    defaultConfig {\n        applicationId \"com.wildan.mpoop2_finalproject\"\n        minSdkVersion 16\n        targetSdkVersion 29\n        versionCode 1\n        versionName \"1.0\"\n\n        testInstrumentationRunner \"androidx.test.runner.AndroidJUnitRunner\"\n    }\n\n    buildTypes {\n        release {\n            minifyEnabled false\n            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'\n        }\n    }\n}\n\ndependencies {\n    implementation fileTree(dir: \"libs\", include: [\"*.jar\"])\n    implementation \"org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version\"\n    implementation 'androidx.core:core-ktx:1.3.2'\n    implementation 'androidx.appcompat:appcompat:1.2.0'\n    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'\n    testImplementation 'junit:junit:4.12'\n    androidTestImplementation 'androidx.test.ext:junit:1.1.2'\n    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'\n\n    def room_version = \"2.2.5\"\n\n    implementation \"androidx.room:room-runtime:$room_version\"\n    kapt \"androidx.room:room-compiler:$room_version\"\n\n    // optional - Kotlin Extensions and Coroutines support for Room\n    implementation \"androidx.room:room-ktx:$room_version\"\n\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/build.gradle	(revision d821eb4daf7a382614b4f8b481fc98a87b7a2b5b)
++++ app/build.gradle	(date 1607497578000)
+@@ -24,6 +24,10 @@
+             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+         }
+     }
++
++    dataBinding{
++        enabled=true
++    }
+ }
+ 
+ dependencies {
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/compiler.xml	(date 1607496504000)
++++ .idea/compiler.xml	(date 1607496504000)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CompilerConfiguration">
++    <bytecodeTargetLevel target="1.8" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_1_7\" project-jdk-name=\"1.8\" project-jdk-type=\"JavaSDK\">\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\n  </component>\n  <component name=\"ProjectType\">\n    <option name=\"id\" value=\"Android\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(revision d821eb4daf7a382614b4f8b481fc98a87b7a2b5b)
++++ .idea/misc.xml	(date 1607496504000)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" project-jdk-name="1.8" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/build/classes" />
+   </component>
+   <component name="ProjectType">
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    package=\"com.wildan.mpoop2_finalproject\">\n\n    <application\n        android:allowBackup=\"true\"\n        android:icon=\"@mipmap/ic_launcher\"\n        android:label=\"@string/app_name\"\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\n        android:supportsRtl=\"true\"\n        android:theme=\"@style/AppTheme\">\n        <activity android:name=\".MainActivity\">\n            <intent-filter>\n                <action android:name=\"android.intent.action.MAIN\" />\n\n                <category android:name=\"android.intent.category.LAUNCHER\" />\n            </intent-filter>\n        </activity>\n    </application>\n\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/AndroidManifest.xml	(revision d821eb4daf7a382614b4f8b481fc98a87b7a2b5b)
++++ app/src/main/AndroidManifest.xml	(date 1607497276000)
+@@ -9,6 +9,7 @@
+         android:roundIcon="@mipmap/ic_launcher_round"
+         android:supportsRtl="true"
+         android:theme="@style/AppTheme">
++        <activity android:name=".ContactActivity"></activity>
+         <activity android:name=".MainActivity">
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
