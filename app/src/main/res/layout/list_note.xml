@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/noteItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="50dp"
+            android:text="Nama : \nNomor:"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/btnDeleteNote"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnDeleteNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Delete"
+            app:layout_constraintBottom_toBottomOf="@+id/noteItem"
+            app:layout_constraintEnd_toStartOf="@+id/btnEditNote"
+            app:layout_constraintTop_toTopOf="@+id/noteItem" />
+
+        <Button
+            android:id="@+id/btnEditNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:text="Edit"
+            app:layout_constraintBottom_toBottomOf="@+id/btnDeleteNote"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnDeleteNote" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
