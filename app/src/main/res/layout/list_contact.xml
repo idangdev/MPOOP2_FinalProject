@@ -8,15 +8,14 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/noteItem"
+            android:id="@+id/contactItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginLeft="32dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
             android:text="Nama : \nNomor:"
             android:textSize="24sp"
-            app:layout_constraintEnd_toStartOf="@+id/btnDeleteNote"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,19 +23,19 @@
             android:id="@+id/btnDeleteNote"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="8dp"
             android:text="Delete"
-            app:layout_constraintBottom_toBottomOf="@+id/noteItem"
-            app:layout_constraintEnd_toStartOf="@+id/btnEditNote"
-            app:layout_constraintTop_toTopOf="@+id/noteItem" />
+            app:layout_constraintStart_toStartOf="@+id/contactItem"
+            app:layout_constraintTop_toBottomOf="@+id/contactItem" />
 
         <Button
             android:id="@+id/btnEditNote"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="32dp"
-            android:layout_marginRight="32dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginRight="100dp"
             android:text="Edit"
             app:layout_constraintBottom_toBottomOf="@+id/btnDeleteNote"
             app:layout_constraintEnd_toEndOf="parent"
