@@ -14,15 +14,11 @@ class MainActivity : AppCompatActivity() {
 
         val binding: ActivityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        binding.contactBtn.setOnClickListener{
-            val intent = Intent(this, ContactActivity::class.java)
+        binding.contactBtn.setOnClickListener {
+            val intent = Intent(this@MainActivity, ContactActivity::class.java)
             startActivity(intent)
         }
 
-        binding.noteBtn.setOnClickListener{
-            val intent = Intent(this, NoteActivity::class.java)
-            startActivity(intent)
-        }
 
     }
 }
