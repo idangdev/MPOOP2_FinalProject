@@ -22,7 +22,8 @@
             android:layout_height="wrap_content"
             android:text="Nama"
             android:textStyle="bold"
-            android:textSize="24sp"/>
+            android:textSize="24sp"
+            android:fontFamily="@font/montserrat_bold"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -35,7 +36,8 @@
                 android:layout_marginTop="5dp"
                 android:ellipsize="end"
                 android:text="Operator :    "
-                android:textSize="16sp"/>
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat"/>
 
 
             <TextView
@@ -45,7 +47,8 @@
                 android:layout_marginTop="5dp"
                 android:ellipsize="end"
                 android:text="Apa aja"
-                android:textSize="16sp"/>
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat"/>
 
         </LinearLayout>
         <LinearLayout
@@ -60,7 +63,8 @@
                 android:layout_marginTop="5dp"
                 android:ellipsize="end"
                 android:text="Nomor    :     "
-                android:textSize="16sp"/>
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat"/>
 
             <TextView
                 android:id="@+id/text_view_nomor"
@@ -69,7 +73,8 @@
                 android:layout_marginTop="5dp"
                 android:ellipsize="end"
                 android:text="082323"
-                android:textSize="16sp"/>
+                android:textSize="16sp"
+                android:fontFamily="@font/montserrat"/>
 
         </LinearLayout>
 

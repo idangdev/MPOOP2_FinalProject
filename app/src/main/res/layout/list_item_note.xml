@@ -21,9 +21,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Note Title"
-            android:textColor="@android:color/black"
             android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:fontFamily="@font/montserrat_bold"/>
 
         <TextView
             android:id="@+id/text_view_body"
@@ -31,7 +31,8 @@
             android:layout_height="match_parent"
             android:layout_marginTop="5dp"
             android:ellipsize="end"
-            android:text="Apa aja" />
+            android:text="Apa aja"
+            android:fontFamily="@font/montserrat"/>
 
     </LinearLayout>
 

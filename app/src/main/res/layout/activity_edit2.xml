@@ -19,6 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:hint="Nama"
+        android:fontFamily="@font/montserrat"
         >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -85,6 +86,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Save"
+        android:backgroundTint="@color/colorBlue"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/button_delete2"
@@ -98,6 +102,7 @@
         android:text="Delete"
         android:textColor="@android:color/white"
         android:visibility="gone"
+        android:fontFamily="@font/montserrat"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/button_save2"
         app:layout_constraintStart_toStartOf="@+id/button_save2" />

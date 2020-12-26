@@ -45,48 +45,70 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginLeft="32dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginRight="32dp"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2">
 
-            <Button
-                android:id="@+id/contactBtn"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_weight="1"
-                android:paddingTop="35dp"
-                android:paddingBottom="35dp"
-                android:text="Contact"
-                android:background="@drawable/bg_button_left"
-                android:fontFamily="@font/montserrat_bold"
-                android:textColor="@android:color/white"
-                android:drawableTop="@drawable/ic_calculator"/>
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+                <Button
+                    android:id="@+id/contactBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2.5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_button_left"
+                    android:drawableTop="@drawable/ic_calculator"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:paddingTop="35dp"
+                    android:paddingBottom="35dp"
+                    android:text="Contact"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/noteBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2.5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_button_right"
+                    android:drawableTop="@drawable/ic_notes"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:paddingTop="35dp"
+                    android:paddingBottom="35dp"
+                    android:text="Note"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
 
             <Button
-                android:id="@+id/noteBtn"
-                android:layout_width="wrap_content"
+                android:id="@+id/btnTentang"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_weight="1"
-                android:paddingTop="35dp"
-                android:paddingBottom="35dp"
-                android:text="Note"
-                android:background="@drawable/bg_button_right"
-                android:textColor="@android:color/white"
+                android:text="Tentang"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginTop="5dp"
                 android:fontFamily="@font/montserrat_bold"
-                android:drawableTop="@drawable/ic_notes"/>
+                android:textColor="@android:color/white"
+                android:background="@drawable/bg_button_down" />
+
         </LinearLayout>
+
 
         <ImageView
             android:id="@+id/imageView4"
