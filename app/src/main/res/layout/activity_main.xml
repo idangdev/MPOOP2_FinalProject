@@ -95,17 +95,39 @@
 
             </LinearLayout>
 
-            <Button
-                android:id="@+id/btnTentang"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tentang"
+                android:layout_marginStart="32dp"
                 android:layout_marginLeft="32dp"
+                android:layout_marginEnd="32dp"
                 android:layout_marginRight="32dp"
-                android:layout_marginTop="5dp"
-                android:fontFamily="@font/montserrat_bold"
-                android:textColor="@android:color/white"
-                android:background="@drawable/bg_button_down" />
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnTentang"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tentang"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="2.5dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/bg_button_down_left" />
+
+                <Button
+                    android:id="@+id/btnSinkron"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sync"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="2.5dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/bg_button_down_right" />
+            </LinearLayout>
 
         </LinearLayout>
 

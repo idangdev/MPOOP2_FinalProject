@@ -3,6 +3,7 @@ package com.wildan.mpoop2_finalproject
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.wildan.mpoop2_finalproject.databinding.ActivityMainBinding
 
@@ -27,6 +28,10 @@ class MainActivity : AppCompatActivity() {
         binding.btnTentang.setOnClickListener {
             val intent = Intent(this@MainActivity, AboutActivity::class.java)
             startActivity(intent)
+        }
+
+        binding.btnSinkron.setOnClickListener {
+            Toast.makeText(this, "Data sudah disinkronasi", Toast.LENGTH_SHORT).show()
         }
 
     }
