@@ -30,8 +30,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        binding.btnSinkron.setOnClickListener {
-            Toast.makeText(this, "Data sudah disinkronasi", Toast.LENGTH_SHORT).show()
+        binding.btnHomework.setOnClickListener {
+            val intent = Intent(this@MainActivity, HomeworkActivity::class.java)
+            startActivity(intent)
         }
 
     }

@@ -4,6 +4,9 @@ apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'kotlin-kapt'
 
+// firebase
+apply plugin: 'com.google.gms.google-services'
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
@@ -37,6 +40,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'com.google.android.material:material:1.2.1'
+    implementation 'com.google.firebase:firebase-database-ktx:19.6.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
@@ -47,6 +51,12 @@ dependencies {
     kapt "androidx.room:room-compiler:2.2.0-rc01"
     androidTestImplementation "androidx.room:room-testing:2.2.0-rc01"
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
+
+    // firebase
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    // ... rest of code
+    compile 'com.google.firebase:firebase-core:11.2.2'
+    // ... rest of code
 
 
 }

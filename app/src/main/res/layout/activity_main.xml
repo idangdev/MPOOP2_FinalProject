@@ -117,16 +117,16 @@
                     android:background="@drawable/bg_button_down_left" />
 
                 <Button
-                    android:id="@+id/btnSinkron"
+                    android:id="@+id/btnHomework"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Sync"
-                    android:layout_weight="1"
-                    android:layout_marginTop="5dp"
                     android:layout_marginLeft="2.5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_button_down_right"
                     android:fontFamily="@font/montserrat_bold"
-                    android:textColor="@android:color/white"
-                    android:background="@drawable/bg_button_down_right" />
+                    android:text="Homework"
+                    android:textColor="@android:color/white" />
             </LinearLayout>
 
         </LinearLayout>
